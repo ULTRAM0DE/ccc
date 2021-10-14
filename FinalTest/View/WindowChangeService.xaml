@@ -32,6 +32,7 @@
                 <TextBox x:Name="tbTime" MinWidth="100"/>
             </StackPanel>
             <Button x:Name="btAdd" Content="Добавить в бд" Click="btAdd_Click"/>
+            <Button x:Name="btRemove" Content="Удалить" Click="btRemove_Click"/>
         </StackPanel>
     </Grid>
 </Window>

@@ -26,10 +26,25 @@ namespace FinalTest.View
         public WindowService()
         {
             InitializeComponent();
-            
+            lbContent.MouseDoubleClick += LbContent_MouseDoubleClick;
             serrvices = GetService();
             Run(serrvices);
         }
+
+        private void LbContent_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            var sours = e.OriginalSource as Border;
+            if (sours == null)
+            {
+                return;
+            }
+            var service = sours.DataContext as View.ModelView.ViewSerrvice;
+            View.WindowChangeService windowChangeService = new WindowChangeService(service);
+            windowChangeService.Show();
+            this.Close();
+        }
+
+        
 
         private void Run(List<ViewSerrvice> serrvices)
         {
@@ -64,33 +79,6 @@ namespace FinalTest.View
             this.Close();
         }
 
-        private void btChange_Click(object sender, RoutedEventArgs e)
-        {
-            var sours = e.OriginalSource as Button;
-            if(sours == null)
-            {
-                return;
-            }
-            var service = sours.DataContext as Button;
-            View.WindowChangeService windowChangeService = new WindowChangeService();
-            windowChangeService.Show();
-            this.Close();
-        }
-
-        /*private void btRemove_Click(object sender, RoutedEventArgs e)
-        {
-            try
-            {
-                if(MessageBox.Show("Вы уверены что хотите удалить", "Удалить",MessageBoxButton.YesNo) == MessageBoxResult.Yes)
-                {
-                    Controll.ControllerService.Remove(Service.Service);
-                    MessageBox.Show("Обьект удален");
-                }
-            }
-            catch
-            {
-                throw new Exception("Ошибка");
-            }
-        }*/
+       
     }
 }

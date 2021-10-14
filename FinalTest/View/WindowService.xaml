@@ -44,8 +44,7 @@
                             <Label Grid.Column="1" Grid.Row="1" Content="{Binding Price}"/>
                             <Label Grid.Column="1" Grid.Row="2" Content="{Binding Sale}"/>
                             <Label Grid.Column="2" Grid.Row="1" Content="{Binding Time}"/>
-                            <Button x:Name="btChange" Content="Редактировать" Grid.Column="2" Grid.Row="2" MaxWidth="100" Click="btChange_Click"/>
-                            <!--<Button x:Name="btRemove" Content="Удалить" Grid.Column="3" Grid.Row="2" MaxWidth="100" Click="btRemove_Click"/>-->
+                            
                         </Grid>
                     </DataTemplate>
                 </ListBox.ItemTemplate>

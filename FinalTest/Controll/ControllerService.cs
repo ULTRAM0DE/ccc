@@ -31,7 +31,7 @@ namespace FinalTest.Controll
 
        
 
-       /* internal static void Remove(DB.Service service)
+        internal static void Remove(DB.Service service)
         {
             try
             {
@@ -43,6 +43,6 @@ namespace FinalTest.Controll
             {
                 throw new Exception("Ошибка");
             }
-        }*/
+        }
     }
 }

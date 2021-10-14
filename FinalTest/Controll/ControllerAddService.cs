@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FinalTest.DB;
+using System;
 using System.Collections.Generic;
 using System.Data.Entity.Migrations;
 using System.Linq;
@@ -40,11 +41,14 @@ namespace FinalTest.Controll
             }
         }
 
-        internal static bool AddChangeService(string name, string price, string sale, string time)
+        internal static bool AddChangeService(string name, string price, string sale, string time, Service service)
         {
-            DB.Service service = new DB.Service();
+            DB.TsaplinEntities1 entities1 = new DB.TsaplinEntities1();
+            DB.Service service1 = entities1.Service.Find(service.Id);
+            
             try
             {
+                service = new DB.Service();
                 service.Name = name;
                 service.Price = Convert.ToInt32(price);
                 service.Sale = Convert.ToInt32(sale);
