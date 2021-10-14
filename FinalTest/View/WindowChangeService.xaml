@@ -5,8 +5,33 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FinalTest.View"
         mc:Ignorable="d"
-        Title="WindowChangeService" Height="450" Width="800">
+        Title="WindowChangeService" Height="434.211" Width="392.632">
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <StackPanel>
+            <Button x:Name="btDn" Content="Назад" Margin="10" Click="btDn_Click"/>
+        </StackPanel>
+        <StackPanel Grid.Column="1">
+            <StackPanel Orientation="Horizontal" Margin="10">
+                <TextBlock Text="Введите название"/>
+                <TextBox x:Name="tbName" MinWidth="100"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="10">
+                <TextBlock Text="Введите Цену"/>
+                <TextBox x:Name="tbPrice" MinWidth="100"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="10">
+                <TextBlock Text="Введите Скидку"/>
+                <TextBox x:Name="tbSale" MinWidth="100"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="10">
+                <TextBlock Text="Введите время выполнения"/>
+                <TextBox x:Name="tbTime" MinWidth="100"/>
+            </StackPanel>
+            <Button x:Name="btAdd" Content="Добавить в бд" Click="btAdd_Click"/>
+        </StackPanel>
     </Grid>
 </Window>

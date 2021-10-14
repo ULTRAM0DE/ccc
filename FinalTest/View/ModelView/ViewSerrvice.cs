@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FinalTest.DB;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace FinalTest.View.ModelView
 {
-    class ViewSerrvice
+    public class ViewSerrvice
     {
-        public DB.Service Service { get; set; }
+        public Service Service { get; set; }
         public string Name { get; set; }
         public string ImagePath { get; set; }
         public string Time { get; set; }
@@ -17,6 +18,7 @@ namespace FinalTest.View.ModelView
 
         public ViewSerrvice(DB.Service service)
         {
+            Service = service;
             Name = $"Название услуги:{service.Name}";
             Time = $"Время выполнения:{service.Time}";
             Price = $"Цена услуги:{service.Price}";

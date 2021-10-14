@@ -28,5 +28,21 @@ namespace FinalTest.Controll
             }
             
         }
+
+       
+
+       /* internal static void Remove(DB.Service service)
+        {
+            try
+            {
+                DB.TsaplinEntities1 entities1 = new DB.TsaplinEntities1();
+                entities1.Service.Remove(entities1.Service.Find(service.Id));
+                entities1.SaveChanges();
+            }
+            catch
+            {
+                throw new Exception("Ошибка");
+            }
+        }*/
     }
 }

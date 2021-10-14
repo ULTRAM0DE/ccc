@@ -23,5 +23,27 @@ namespace FinalTest.View
         {
             InitializeComponent();
         }
+
+        private void btAdd_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                if (Controll.ControllerAddService.AddChangeService(tbName.Text, tbPrice.Text, tbSale.Text, tbTime.Text))
+                {
+                    MessageBox.Show("Обьект добавлен");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void btDn_Click(object sender, RoutedEventArgs e)
+        {
+            View.WindowService service = new WindowService();
+            service.Show();
+            this.Close();
+        }
     }
 }

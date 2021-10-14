@@ -1,4 +1,5 @@
-﻿using FinalTest.View.ModelView;
+﻿using FinalTest.DB;
+using FinalTest.View.ModelView;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,6 +21,7 @@ namespace FinalTest.View
     /// </summary>
     public partial class WindowService : Window
     {
+        public View.ModelView.ViewSerrvice Service { get;}
         private static List<View.ModelView.ViewSerrvice> serrvices = new List<ModelView.ViewSerrvice>();
         public WindowService()
         {
@@ -74,5 +76,21 @@ namespace FinalTest.View
             windowChangeService.Show();
             this.Close();
         }
+
+        /*private void btRemove_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                if(MessageBox.Show("Вы уверены что хотите удалить", "Удалить",MessageBoxButton.YesNo) == MessageBoxResult.Yes)
+                {
+                    Controll.ControllerService.Remove(Service.Service);
+                    MessageBox.Show("Обьект удален");
+                }
+            }
+            catch
+            {
+                throw new Exception("Ошибка");
+            }
+        }*/
     }
 }

@@ -14,9 +14,9 @@ namespace FinalTest.View.ModelView
 
         public ViewServiceClient(DB.ServiceClient service)
         {
-            Service = $"{service.Service1.Name}";
-            Client = $"{service.Client1.Name}";
-            Date = $"{service.Date}";
+            Service = $"Название услуги:{service.Service1.Name} | Цена:{service.Service1.Price}";
+            Client = $"Имя;{service.Client1.Name} | Фамилия:{service.Client1.SurName} | Отчество:{service.Client1.LastName}";
+            Date = $"Дата:{service.Date}";
         }
     }
 }
