@@ -38,8 +38,10 @@
                                 <RowDefinition/>
                                 <RowDefinition/>
                             </Grid.RowDefinitions>
-                            
-                          
+                            <Label Grid.Column="1" Grid.Row="1" Content="{Binding Service}"/>
+                            <Label Grid.Column="1" Grid.Row="2" Content="{Binding Client}"/>
+                            <Label Grid.Column="2" Grid.Row="1" Content="{Binding Date}"/>
+
                         </Grid>
                     </DataTemplate>
                 </ListBox.ItemTemplate>

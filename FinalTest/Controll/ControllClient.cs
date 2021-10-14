@@ -13,7 +13,7 @@ namespace FinalTest.Controll
         {
             try
             {
-                DB.TsaplinEntities tsaplinEntities = new DB.TsaplinEntities();
+                DB.TsaplinEntities1 tsaplinEntities = new DB.TsaplinEntities1();
                 var client = tsaplinEntities.Client.ToList();
                 List<View.ModelView.ViewClient> clients = new List<View.ModelView.ViewClient>();
                 foreach (var item in client)

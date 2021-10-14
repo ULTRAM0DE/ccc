@@ -28,7 +28,7 @@ namespace FinalTest.Controll
             }
             try
             {
-                DB.TsaplinEntities entities = new DB.TsaplinEntities();
+                DB.TsaplinEntities1 entities = new DB.TsaplinEntities1();
                 entities.Service.Add(service);
                 entities.SaveChanges();
                 return true;

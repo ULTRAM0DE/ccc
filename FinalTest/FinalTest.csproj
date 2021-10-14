@@ -67,14 +67,27 @@
     <Compile Include="Controll\ControllAddClient.cs" />
     <Compile Include="Controll\ControllClient.cs" />
     <Compile Include="Controll\ControllerAddService.cs" />
+    <Compile Include="Controll\ControllerAddServiceClient.cs" />
     <Compile Include="Controll\ControllerService.cs" />
+    <Compile Include="Controll\ControllServiceClient.cs" />
+    <Compile Include="Controll\ServiceClientId.cs" />
     <Compile Include="DB\Client.cs">
       <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Model1.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.Context.tt</DependentUpon>
     </Compile>
     <Compile Include="DB\Model1.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Model1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.edmx</DependentUpon>
     </Compile>
     <Compile Include="DB\Service.cs">
       <DependentUpon>Model1.tt</DependentUpon>
@@ -93,11 +106,15 @@
     </Compile>
     <Compile Include="View\ModelView\ViewClient.cs" />
     <Compile Include="View\ModelView\ViewSerrvice.cs" />
+    <Compile Include="View\ModelView\ViewServiceClient.cs" />
     <Compile Include="View\WindowAddClient.xaml.cs">
       <DependentUpon>WindowAddClient.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\WindowAddService.xaml.cs">
       <DependentUpon>WindowAddService.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\WindowAddServiceClient.xaml.cs">
+      <DependentUpon>WindowAddServiceClient.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\WindowChangeService.xaml.cs">
       <DependentUpon>WindowChangeService.xaml</DependentUpon>
@@ -131,6 +148,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="View\WindowAddServiceClient.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\WindowChangeService.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -149,16 +170,6 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DB\Model1.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Model1.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DB\Model1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Model1.edmx</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -193,16 +204,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="DB\Model1.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>Model1.Context.cs</LastGenOutput>
-      <DependentUpon>Model1.edmx</DependentUpon>
-    </Content>
-    <Content Include="DB\Model1.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Model1.edmx</DependentUpon>
-      <LastGenOutput>Model1.cs</LastGenOutput>
-    </Content>
     <Resource Include="Услуги автосервиса\no image.png" />
     <Resource Include="Услуги автосервиса\diz.jpg" />
     <Resource Include="Услуги автосервиса\rulevoe-upravlenie-avtomobilya.jpg" />
@@ -224,6 +225,18 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DB\Model1.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="DB\Model1.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

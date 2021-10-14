@@ -38,5 +38,12 @@ namespace FinalTest
             window.Show();
             this.Close();
         }
+
+        private void button2_Click(object sender, RoutedEventArgs e)
+        {
+            View.WindowServiceClient windowServiceClient = new View.WindowServiceClient();
+            windowServiceClient.Show();
+            this.Close();
+        }
     }
 }

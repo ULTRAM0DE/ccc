@@ -7,26 +7,25 @@ using System.Threading.Tasks;
 
 namespace FinalTest.Controll
 {
-    class ControllerService
+    class ControllServiceClient
     {
-        internal static List<ViewSerrvice> GetService()
+        internal static List<ViewServiceClient> GetServiceClient()
         {
             try
             {
                 DB.TsaplinEntities1 tsaplinEntities = new DB.TsaplinEntities1();
-                var service = tsaplinEntities.Service.ToList();
-                List<View.ModelView.ViewSerrvice> serrvices = new List<ViewSerrvice>();
-                foreach (var item in service)
+                var serviceclient = tsaplinEntities.ServiceClient.ToList();
+                List<View.ModelView.ViewServiceClient> serviceClients = new List<View.ModelView.ViewServiceClient>();
+                foreach (var item in serviceclient)
                 {
-                    serrvices.Add(new ViewSerrvice(item));
+                    serviceClients.Add(new View.ModelView.ViewServiceClient(item));
                 }
-                return serrvices;
+                return serviceClients;
             }
             catch
             {
                 throw new Exception("Ошибка");
             }
-            
         }
     }
 }

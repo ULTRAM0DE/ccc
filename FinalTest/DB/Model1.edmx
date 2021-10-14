@@ -230,7 +230,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="TsaplinEntities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="TsaplinEntities1" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Client" EntityType="Self.Client" />
           <EntitySet Name="Service" EntityType="Self.Service" />
           <EntitySet Name="ServiceClient" EntityType="Self.ServiceClient" />
@@ -255,7 +255,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="Хранилище TsaplinModelContainer" CdmEntityContainer="TsaplinEntities">
+        <EntityContainerMapping StorageEntityContainer="Хранилище TsaplinModelContainer" CdmEntityContainer="TsaplinEntities1">
           <EntitySetMapping Name="Client">
             <EntityTypeMapping TypeName="TsaplinModel.Client">
               <MappingFragment StoreEntitySet="Client">

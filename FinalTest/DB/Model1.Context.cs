@@ -13,10 +13,10 @@ namespace FinalTest.DB
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class TsaplinEntities : DbContext
+    public partial class TsaplinEntities1 : DbContext
     {
-        public TsaplinEntities()
-            : base("name=TsaplinEntities")
+        public TsaplinEntities1()
+            : base("name=TsaplinEntities1")
         {
         }
     

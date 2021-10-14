@@ -9,6 +9,7 @@
     <Grid>
         <Button x:Name="button" Content="Все услуги" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="206" Height="79" Click="button_Click"/>
         <Button x:Name="button1" Content="Все клиенты" HorizontalAlignment="Left" Margin="10,118,0,0" VerticalAlignment="Top" Width="206" Height="92" Click="button1_Click"/>
+        <Button x:Name="button2" Content="Записаться" HorizontalAlignment="Left" Margin="10,215,0,0" VerticalAlignment="Top" Width="206" Height="106" Click="button2_Click"/>
 
     </Grid>
 </Window>
