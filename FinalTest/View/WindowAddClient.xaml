@@ -1,0 +1,49 @@
+﻿<Window x:Class="FinalTest.View.WindowAddClient"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FinalTest.View"
+        mc:Ignorable="d"
+        Title="WindowAddClient" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <StackPanel>
+            <Button x:Name="btDn" Content="Назад" Margin="10" Click="btDn_Click"/>
+        </StackPanel>
+        <StackPanel Grid.Column="1">
+            <StackPanel Orientation="Horizontal" Margin="10">
+                <TextBlock Text="Введите Имя"/>
+                <TextBox x:Name="tbName" MinWidth="100"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="10">
+                <TextBlock Text="Введите Фамилию"/>
+                <TextBox x:Name="tbSurName" MinWidth="100"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="10">
+                <TextBlock Text="Введите Отчество"/>
+                <TextBox x:Name="tbLastName" MinWidth="100"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="10">
+                <TextBlock Text="Введите Email"/>
+                <TextBox x:Name="tbEmail" MinWidth="100"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="10">
+                <TextBlock Text="Введите День рождения"/>
+                <TextBox x:Name="tbBirthaday" MinWidth="100"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="10">
+                <TextBlock Text="Введите Дату регистрации"/>
+                <TextBox x:Name="tbDay_Registration" MinWidth="100"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="10">
+                <TextBlock Text="Введите Телефон"/>
+                <TextBox x:Name="tbPhone" MinWidth="100"/>
+            </StackPanel>
+            <Button x:Name="btAdd" Content="Добавить в бд" Click="btAdd_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>
